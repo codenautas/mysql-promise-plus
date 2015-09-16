@@ -3,7 +3,7 @@
 /*jshint globalstrict:true */
 /*jshint node:true */
 
-var mysqlPromise = {};
+var mysqlPromisePlus = {};
 
 var Promises = require('best-promise');
 var sqlPromise = require('sql-promise');
@@ -35,7 +35,7 @@ function MysqlQuery(preparedQuery, data) {
     this.data = data;
 };
 
-mysqlPromise.Motor = function MysqlMotor() {
+mysqlPromisePlus.Motor = function MysqlMotor() {
     this.connect=function connect(params) {
         if(! params) {
             return Promises.reject("MysqlMotor: null params");
@@ -83,4 +83,4 @@ mysqlPromise.Motor = function MysqlMotor() {
     }
 };
 
-module.exports = mysqlPromise;
+module.exports = mysqlPromisePlus;
