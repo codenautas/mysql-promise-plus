@@ -1,0 +1,56 @@
+{
+  "name": "mysql-pms",
+  "description": "mysql with promise A+",
+  "version": "0.0.1",
+  "author": "Codenautas <codenautas@googlegroups.com>",
+  "license": "MIT",
+  "repository": "codenautas/mysql-pms",
+  "contributors": [{
+    "name": "Emilio Platzer", "email": "emilioplatzer@gmail.com"
+  },{
+    "name": "Diego Florio", "email": "diegoefe@gmail.com"
+  }],
+  "dependencies": {
+    "fs-promise": "0.3.1",
+    "lodash": "3.10.1",
+    "promise": "7.0.4",
+    "mysql": "2.9.0",
+    
+    "best-promise": "0.2.3",
+    "sql-promise": "~0.0.8"
+  },
+  "devDependencies": {
+    "bluebird": "2.9.34",
+    "colors": "1.1.2",
+    "es6-promise": "3.0.2",
+    "expect.js": "0.3.1",
+    "istanbul": "0.3.19",
+    "mocha": "2.3.0",
+    "native-promise-only": "0.8.1",
+    "q": "1.4.1",
+    "rsvp": "3.1.0",
+    "sinon": "1.16.1",
+    "when": "3.7.3"
+  },
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+    "scripts": {
+    "test": "node test.js",
+    "test-ci": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks test/",
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot --check-leaks test/"
+  },
+  "jshintConfig": {
+    "asi": false,
+    "curly": true,
+    "forin": true
+  },
+  "codenautas": {
+    "package-version": "0.0.1",
+    "run-in": "server",
+    "test-appveyor": true,
+    "type": "lib",
+    "stage": "designing",
+    "coverage": 60
+  }
+}
