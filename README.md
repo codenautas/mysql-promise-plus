@@ -1,9 +1,12 @@
-# mysql-pms
-mysql with promise A+
+# mysql-promise-plus
+MySQL module based on sql-promise
 
 # como probar:
+- Crear base de datos y usuario (ver test.js)
+
 ```sh
  $ npm link sql-promise
+ $ npm link sql-promise-tester
  $ npm install
  $ npm test
 ```
