@@ -55,5 +55,5 @@ tester(MotorMysql, {
     connOpts: defaultConnOpts, 
     badConnOpts: badConnOpts, 
     prepare:prepareConnection,
-    testUntil:'connect'
+    testUntil:'select'
 });
