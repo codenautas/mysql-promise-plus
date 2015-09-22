@@ -45,7 +45,7 @@ function prepareConnection(){
 
 var badConnOpts = {
   motor      :'test',
-  host       : 'localhostage',
+  host       : 'localhost', // si el localhost, no es necesario en sql-promise-tester (no hay look-up)
   user       : 'nodeja',
   password   : 'edonista',
   database   : 'nodeprumal'
@@ -54,6 +54,5 @@ var badConnOpts = {
 tester(MotorMysql, {
     connOpts: defaultConnOpts, 
     badConnOpts: badConnOpts, 
-    prepare:prepareConnection,
-    testUntil:'select'
+    prepare:prepareConnection
 });
