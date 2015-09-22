@@ -13,7 +13,7 @@ if(! winOS) {
     params['socketPath']= '/var/run/mysql/mysql.sock';
 }
 
-var mysqlPMS = require('../bin/mysql-promise-plus.js');
+var mysqlPMS = require('..');
 
 var motor = new mysqlPMS.Motor;
 var conn=null;
