@@ -3,21 +3,39 @@
 var Path = require('path');
 var winOS = Path.sep==='\\';
 
-var params = {
+var MotorMysql = require('..').Motor;
+
+var defaultConnOpts = {
   host       : 'localhost',
   user       : 'node',
   password   : 'edon',
   database   : 'nodepru'
 };
 if(! winOS) {
-    params['socketPath']= '/var/run/mysql/mysql.sock';
+    defaultConnOpts['socketPath']= '/var/run/mysql/mysql.sock';
 }
 
+function prepareConnection(){
+    var dbFile = defaultConnOpts.file;
+    return fs.unlink(dbFile).catch(function(err){
+        if(err.code!=='ENOENT'){ throw err; }
+    }).then(function(){
+        MotorSqlite.connect(defaultConnOpts);
+    });
+}
+
+tester(MotorSqlite, {
+    connOpts: defaultConnOpts, 
+    badConnOpts: 'inexis_file.db', 
+    prepare:prepareConnection
+});
+
+/*
 var mysqlPMS = require('..');
 
 var motor = new mysqlPMS.Motor;
 var conn=null;
-motor.connect(params).then(function(con) {
+motor.connect(defaultConnOpts).then(function(con) {
     // console.log("******************* con", con);
     //return motor.prepare(con, "CREATE table t1(id integer, name varchar);");
     conn = con;
@@ -34,3 +52,4 @@ motor.connect(params).then(function(con) {
 }).catch(function(err) {
     console.log("******************* err", err.stack);
 });
+*/
