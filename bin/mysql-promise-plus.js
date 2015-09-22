@@ -5,7 +5,7 @@
 
 var mysqlPromisePlus = {};
 
-var Promises = require('best-promise');
+var Promises = require('promise-plus');
 var sqlPromise = require('sql-promise');
 var mysql = require('mysql');
 
