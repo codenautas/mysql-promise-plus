@@ -23,6 +23,8 @@ function prepareConnection(){
     var conn;
     return MotorMysql.connect(defaultConnOpts).then(function(con) {
         conn = con;
+        // esto por ahora no funciona si no existe la base de datos
+        // tal vez haya que conectar inicialmente con mysql y luego borrar y crear la base
         return MotorMysql.prepare(con, "DROP DATABASE IF EXISTS "+defaultConnOpts.database);
     }).then(function(query) {
         return MotorMysql.query(query);
