@@ -11,9 +11,9 @@ var MotorMysql = require('..').Motor;
 var defaultConnOpts = {
   motor      :'test',
   host       : 'localhost',
-  user       : 'node',
-  password   : 'edon',
-  database   : 'nodepru',
+  user       : 'test_user',
+  password   : 'test_pass',
+  database   : 'test_db',
   port       : MotorMysql.defaultPort
 };
 if(! winOS) {
