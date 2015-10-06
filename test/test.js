@@ -16,9 +16,11 @@ var defaultConnOpts = {
   database   : 'test_db',
   port       : MotorMysql.defaultPort
 };
+/*
 if(! winOS) {
     defaultConnOpts['socketPath']= '/var/run/mysql/mysql.sock';
 }
+*/
 
 function prepareConnection(){
     var conn;
