@@ -9,7 +9,7 @@ MySQL with promise A+
 [!--lang:*-->
 
 <!-- cucardas -->
-![designing](https://img.shields.io/badge/stability-desgining-red.svg)
+![designing](https://img.shields.io/badge/stability-designing-red.svg)
 [![npm-version](https://img.shields.io/npm/v/mysql-promise-plus.svg)](https://npmjs.org/package/mysql-promise-plus)
 [![downloads](https://img.shields.io/npm/dm/mysql-promise-plus.svg)](https://npmjs.org/package/mysql-promise-plus)
 [![build](https://img.shields.io/travis/codenautas/mysql-promise-plus/master.svg)](https://travis-ci.org/codenautas/mysql-promise-plus)
